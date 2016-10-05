@@ -1,0 +1,142 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".activities.LoggedInActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:id="@+id/editProfile"
+            android:onClick="editProfile"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/genderLabel"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/Logout"
+            android:onClick="logout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Movies"
+            android:id="@+id/button5"
+            android:onClick="goToSearch"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/Logout" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileFirstName"
+            android:inputType="none"
+            android:layout_below="@+id/profileEmail"
+            android:layout_alignStart="@+id/profileEmail" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileLastName"
+            android:inputType="none"
+            android:layout_below="@+id/profileFirstName"
+            android:layout_alignStart="@+id/profileEmail" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileEmail"
+            android:inputType="none"
+            android:layout_alignStart="@+id/profileMajor"
+            android:layout_alignBottom="@+id/emailLabel" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileGender"
+            android:inputType="none"
+            android:layout_alignBottom="@+id/genderLabel"
+            android:layout_toStartOf="@+id/button5" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileMajor"
+            android:inputType="none"
+            android:layout_above="@+id/profileGender"
+            android:layout_alignStart="@+id/profileGender" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:id="@+id/emailLabel"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="41dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name"
+            android:id="@+id/firstNameLabel"
+            android:layout_alignBottom="@+id/profileFirstName"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:id="@+id/genderLabel"
+            android:layout_below="@+id/majorLabel"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/major"
+            android:id="@+id/majorLabel"
+            android:layout_below="@+id/lastNameLabel"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_name"
+            android:id="@+id/lastNameLabel"
+            android:layout_marginTop="28dp"
+            android:layout_below="@+id/profileFirstName"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommendations"
+            android:id="@+id/recommendations"
+            android:onClick="getRecommendation"
+            android:layout_alignTop="@+id/button5"
+            android:layout_toStartOf="@+id/button5" />
+
+    </RelativeLayout>
+</FrameLayout>

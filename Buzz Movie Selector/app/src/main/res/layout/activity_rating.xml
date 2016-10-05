@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReviewActivity">
+
+    <ProgressBar
+        android:id="@+id/rating_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/rating_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/movie_rating"
+        android:layout_gravity="right|center_vertical"
+        android:numeric="integer"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Rate Movie (1-100):"
+            android:id="@+id/text2"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="40dp" />
+
+        <EditText
+            android:layout_width="336dp"
+            android:layout_height="233dp"
+            android:id="@+id/movie_review"
+            android:layout_gravity="center_horizontal|top"
+            android:hint="Write Review..."
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="0dp" />
+
+        <Button
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/movie_submit"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="140dp"
+            android:onClick="addRating" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Write Review:"
+            android:id="@+id/textView3"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

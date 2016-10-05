@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thundercats50.moviereviewer">
+
+    <!--to user internet-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--to check if there is internet-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".models.UserManager"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".activities.LoggedInActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_logged_in"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.SearchResultsActivity" />
+        android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SearchActivity"
+            android:label="Search For Movies">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@layout/searchable" />
+        </activity>
+        <activity android:name=".activities.ReviewActivity" />
+        <activity
+            android:name=".activities.RecommendationActivity"
+            android:label="Recommendations" />
+        <activity
+            android:name=".activities.AdminActivity"
+            android:label="Admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.StatusActivity"></activity>
+    </application>
+
+</manifest>
